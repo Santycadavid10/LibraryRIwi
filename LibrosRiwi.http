@@ -1,0 +1,6 @@
+@LibrosRiwi_HostAddress = http://localhost:5115
+
+GET {{LibrosRiwi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

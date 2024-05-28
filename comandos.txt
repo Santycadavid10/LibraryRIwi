@@ -1,0 +1,15 @@
+
+/////////////////////////////////////////Crear tabla authors/////////////////////////////////////////////7
+CREATE TABLE Authors (
+     Id INT(11) AUTO_INCREMENT PRIMARY KEY,
+     Name VARCHAR(255), 
+     LastName VARCHAR(255), 
+     Email VARCHAR(255), 
+     Nationality VARCHAR(100));
+     ***********************************insertar datos ala tabla authors
+     INSERT INTO Authors (Name, LastName, Email, Nationality) VALUES 
+('Gabriel', 'García Márquez', 'gabriel.garcia@example.com', 'Colombian'),
+('Isabel', 'Allende', 'isabel.allende@example.com', 'Chilean'),
+('Mario', 'Vargas Llosa', 'mario.vargas@example.com', 'Peruvian'),
+('Jorge Luis', 'Borges', 'jorge.borges@example.com', 'Argentinian'),
+('Pablo', 'Neruda', 'pablo.neruda@example.com', 'Chilean');
