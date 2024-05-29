@@ -9,8 +9,21 @@ public class ViewsAuthorsnController : ControllerBase
   {
     _authorRepository = authorRepository;
   }
+
+
+
+  //Listar Authores
   public IEnumerable<Author> GetCoupons()
   {
     return _authorRepository.GetAll();
   }
+
+
+  
+
+//listar Atuthor por ID detalles
+  public Author Details(int id)
+  {
+    return _authorRepository.GetById(id);
+  }  
 }
