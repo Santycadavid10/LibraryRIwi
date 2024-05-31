@@ -28,4 +28,24 @@ public class ViewsAuthorsController : ControllerBase
     }
     return Ok(author);
   }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //Listar autores activos
+  [HttpGet("ListarAutoresActivos")]
+  public ActionResult<IEnumerable<Author>> GetActiveAuthors()
+  {
+    var activeAuthors = _authorRepository.GetActiveAuthors();
+    return Ok(activeAuthors);
+  }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //listar autores inactivos
+  [HttpGet("ListarAutoresInactivos")]
+  public ActionResult<IEnumerable<Author>> GetInactiveAuthors()
+  {
+    var inactiveAuthors = _authorRepository.GetInactiveAuthors();
+    return Ok(inactiveAuthors);
+  }
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+
+
 }
