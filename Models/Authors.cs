@@ -1,3 +1,7 @@
+using Books.Models;
+using System.Text.Json.Serialization;
+
+
 namespace Authors.Models;
 
 public enum AuthorStatus
@@ -14,4 +18,7 @@ public class Author
     public string? Email { get; set; }
     public string? Nationality { get; set; }
     public AuthorStatus? Status { get; set; }
+    // Navegación de uno a muchos
+    [JsonIgnore]
+    public ICollection<Book> Books { get; set; } = new List<Book>();
 }

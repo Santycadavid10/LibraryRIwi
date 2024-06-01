@@ -1,5 +1,7 @@
 using Library.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,10 @@ builder.Services.AddDbContext<LibraryContext>(options => options.UseMySql(
     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.2-mysql")));
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IEditorialsRepository, EditorialsRepository>();
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
+
+
+
 
 
 

@@ -19,4 +19,18 @@ Email NVARCHAR(100),
 Status TINYINT
 );
 
-añadir editorial
+
+/////////////////////////////////////////////////////////////////////////
+crear tabla libros 
+CREATE TABLE Books (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255),
+    Pages VARCHAR(50),
+    Languages VARCHAR(50),
+    PublicationDate DATE,
+    Description TEXT,
+    AuthorId INT,
+    EditorialId INT,
+    FOREIGN KEY (AuthorId) REFERENCES Authors(Id),
+    FOREIGN KEY (EditorialId) REFERENCES Editorials(Id)
+);
